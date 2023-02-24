@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POST METHODS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="../dist/output.css" />
+  </head>
+  <body class="font-kumb text-sm bg-white">
+    <div class="area">
+      <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <div class="context p-[8em]">
+        <div
+          class="bg-[#fff] w-[400px] max-w-full box-border p-[25px] m-auto relative z-10 shadow-md origin-tb scale-scale3d animate-expand opacity-1 form_wrapper"
+        >
+          <div action="" class="form_container">
+            <div class="pb-4 text-center title_container">
+              <h1 class="text-3xl font-bold leading-[1.5em] m-0">sign up</h1>
+            </div>
+            <div class="row clearfix">
+              <div class="">
+                <form class="form">
+                  <div class="input_field">
+                    <span class="">
+                      <i aria-hidden="true" class="fa fa-envelope"> </i>
+                    </span>
+                    <input
+                      type="email"
+                      name="email"
+                      class="email"
+                      placeholder="Email"
+                      autocomplete="email"
+                      required
+                    />
+                  </div>
+
+                  <div class="input_field">
+                    <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                    <input
+                      type="password"
+                      name="password"
+                      placeholder="New Password"
+                      autocomplete="new-password"
+                      class="password"
+                      required
+                    />
+                  </div>
+
+                  <div class="input_field">
+                    <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                    <input
+                      type="password"
+                      name="password"
+                      class="retypePassword"
+                      placeholder="Confirm Password"
+                      autocomplete="current-password"
+                      required
+                    />
+                  </div>
+
+                  <div class="clearfix flex gap-4 w-full">
+                    <div class="col_half">
+                      <div class="input_field">
+                        <span
+                          ><i aria-hidden="true" class="fa fa-user"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="First Name"
+                          class="first-name"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col_half">
+                      <div class="input_field">
+                        <span
+                          ><i aria-hidden="true" class="fa fa-user"></i
+                        ></span>
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Last Name"
+                          class="last-name"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="input_field checkbox_option">
+                    <input type="checkbox" id="cb1" required />
+                    <label for="cb1">I agree with terms and conditions</label>
+                  </div>
+
+                  <input class="button" type="submit" value="sign up" />
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <div class="verificationModal hidden">
+            <div class="pb-4">
+              <h1 class="text-3xl text-center font-bold leading-[1.5em] m-0">
+                OTP verification
+              </h1>
+              <div class="bg-[#52c5524d] p-6 text-base">
+                <p>
+                  We've sent a verification code to
+                  <span class="verified"></span>
+                </p>
+              </div>
+            </div>
+            <form action="" class="submitOTP">
+              <div class="input_field">
+                <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                <input
+                  type="text"
+                  name="email"
+                  value="..."
+                  autocomplete="username email"
+                  style="display: none"
+                />
+                <input
+                  type="password"
+                  name="password"
+                  placeholder="Enter verification code"
+                  autocomplete="new-password"
+                  class="password"
+                  type="hidden"
+                />
+              </div>
+
+              <input class=" " type="submit" value="submit" />
+            </form>
+          </div>
+
+          <div class="flex-col gap-4 hidden error-modal">
+            <div
+              class="bg-[crimson] h-[80px] w-[80px] rounded-full text-center pt-4 text-white text-5xl mx-auto"
+            >
+              <i class="fas fa-x"></i>
+            </div>
+
+            <p
+              class="text-lg text-center first-letter:capitalize errormessage"
+            ></p>
+            <input
+              class="button bg-[crimson] h-9 leading-9 w-full border-none outline-none cursor-pointer text-lg mb-5 font-bold text-white transition-all ease-in-out duration-[0.3s] close-modal"
+              type="button"
+              value="ok"
+            />
+          </div>
+
+          <div class="flex-col gap-4 hidden success-modal">
+            <div
+              class="bg-[#52c5524d] h-[80px] w-[80px] rounded-full text-center pt-4 text-white text-5xl mx-auto"
+            >
+              <i class="fas fa-check"></i>
+            </div>
+
+            <p
+              class="text-lg text-center first-letter:capitalize successmessage"
+            ></p>
+            <input
+              class="button bg-[#52c5524d] h-9 leading-9 w-full border-none outline-none cursor-pointer text-lg mb-5 font-bold text-white transition-all ease-in-out duration-[0.3s] close-modal"
+              type="button"
+              value="ok"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../assets/JS/post.js"></script>
+  </body>
+</html>
